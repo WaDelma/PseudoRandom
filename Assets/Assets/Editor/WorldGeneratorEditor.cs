@@ -9,8 +9,15 @@ public class WorldGeneratorEditor : Editor {
 		WorldGenerator myTarget = (WorldGenerator) target;
 		
 		DrawDefaultInspector();
-		if(GUILayout.Button("nappula")) {
+		if(GUILayout.Button("Luo uudestaan")) {
+			myTarget.Delete();
 			myTarget.Generoi();
+		}
+		if(GUILayout.Button("Luo")) {
+			myTarget.Generoi();
+		}
+		if(GUILayout.Button("Poista")) {
+			myTarget.Delete();
 		}
 	}
 	
