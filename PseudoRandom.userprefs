@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Expire.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Enemies\EnemyAI.cs">
     <Files>
-      <File FileName="Assets\scripts\player\PlayerController.cs" Line="33" Column="51" />
-      <File FileName="Assets\scripts\Weapons\ShotgunScript.cs" Line="16" Column="17" />
-      <File FileName="Assets\scripts\Weapons\WeaponScript.cs" Line="14" Column="38" />
-      <File FileName="Assets\scripts\Expire.cs" Line="5" Column="2" />
+      <File FileName="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs" Line="19" Column="32" />
+      <File FileName="Assets\Resources\Scripts\Enemies\EnemyController.cs" Line="14" Column="16" />
+      <File FileName="Assets\Resources\Scripts\Enemies\EnemyAI.cs" Line="62" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
