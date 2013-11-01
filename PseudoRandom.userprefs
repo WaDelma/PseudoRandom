@@ -1,10 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Enemies\EnemyAI.cs">
     <Files>
       <File FileName="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs" Line="19" Column="32" />
       <File FileName="Assets\Resources\Scripts\Enemies\EnemyController.cs" Line="14" Column="16" />
       <File FileName="Assets\Resources\Scripts\Enemies\EnemyAI.cs" Line="62" Column="29" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HouseGenerator.cs">
+    <Files>
+      <File FileName="Assets\scripts\player\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Weapons\ShotgunScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Weapons\WeaponScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Expire.cs" Line="1" Column="1" />
+      <File FileName="Assets\WorldGenerator.cs" Line="24" Column="26" />
+      <File FileName="Assets\HouseGenerator.cs" Line="82" Column="2" />
+      <File FileName="Assets\Generator.cs" Line="21" Column="3" />
+      <File FileName="Assets\Assets\Editor\GeneratorEditor.cs" Line="21" Column="1" />
+>>>>>>> upstream/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
