@@ -79,16 +79,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: ultimate weapon
-  damage: 20
+  damage: 50
   ammoCount: 10
   clipSize: 10
+  distance: 100
   reloadTime: 2
   firingSpeed: .100000001
   automaticFire: 0
+  muzzlePosition: {x: 0, y: .100000001, z: .5}
   projectilePrefab: {fileID: 0}
   bulletTrailPrefab: {fileID: 100000, guid: 866cb844ea8e932498c6a3749f0017d5, type: 2}
-  shots: 20
-  shotAngle: 20
+  firingSound: {fileID: 8300000, guid: b41cad28af7f4f243b9258c40237b71d, type: 3}
+  reloadSound: {fileID: 0}
+  shots: 40
+  spread: .300000012
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
