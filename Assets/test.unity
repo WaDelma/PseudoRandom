@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876aa10ea8d2c65459f5af54fe8c53b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
   direction: 0
   windowOffset: 0
   windowSpacing: 1
@@ -238,6 +239,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80f255ba68981b24488b912ff9a46ca0, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   roadSpacing: {x: 5, y: 5}
   dimensions: {x: 5, y: 5}
