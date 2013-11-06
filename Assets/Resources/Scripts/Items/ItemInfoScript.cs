@@ -7,10 +7,14 @@ using System.Collections;
 public class ItemInfoScript : MonoBehaviour {
 	private ItemInfo info;
 	public string name;
+	public Texture2D icon;
+	public string description;
+	public int amount;
+
 	
 	// Use this for initialization
 	void Start () {
-		info = new ItemInfo(name);
+		info = new ItemInfo(name, icon, description, amount);
 	}
 	
 	// Update is called once per frame
@@ -23,5 +27,5 @@ public class ItemInfoScript : MonoBehaviour {
 		return info;
 	}
 	
-	
+
 }

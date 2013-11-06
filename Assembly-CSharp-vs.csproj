@@ -106,6 +106,7 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\Resources\Classes\ItemInfo.cs" />
+     <Compile Include="Assets\Resources\Classes\Slot.cs" />
      <Compile Include="Assets\Resources\Scripts\AreaSpawner.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyController.cs" />
