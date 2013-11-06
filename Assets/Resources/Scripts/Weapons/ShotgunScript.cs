@@ -6,22 +6,11 @@ public class ShotgunScript : WeaponScript {
 	public int shots = 20;
 	public float spread = 20.0f; //spreading angle
 	
-	// Use this for initialization
-	public void Start() {
-		
-	}
-	
-	// Update is called once per frame
-	public void Update() {
-		base.Update();
-		
-	}
-	
 	protected override void Fire() {
 		base.Fire();
 		
 		for(int i = 0; i < shots; i++) {
-			Vector3 direction = transform.forward.Clone();
+			Vector3 direction = transform.forward;
 			RaycastHit hit;
 			direction = Utils.RotateX(direction, Random.Range(spread / -2, spread / 2));
 			direction = Utils.RotateY(direction, Random.Range(spread / -2, spread / 2));

@@ -21,7 +21,10 @@ public static class Utils {
 		return new Vector3((cos * vector.x) - (sin * vector.y), (cos * vector.y) + (sin * vector.x), vector.z);
 	}
 	
-	public static Vector3 Clone(this Vector3 v) {
-		return new Vector3(v.x, v.y, v.z);
+	public static Vector3 Snap(Vector3 vector, float unit) {
+		vector.x = Mathf.Floor(vector.x / unit) * unit;
+		vector.y = Mathf.Floor(vector.y / unit) * unit;
+		vector.z = Mathf.Floor(vector.z / unit) * unit;
+		return vector;
 	}
 }
