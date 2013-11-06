@@ -27,8 +27,7 @@ public class InventoryGUI : MonoBehaviour
 	void Update ()
 	{
 		
-		
-		// Turn Inventory on or off
+				// Turn Inventory on or off
 		if (Input.GetKeyUp (KeyCode.Tab)) {
 			if (inventoryOn) {
 				inventoryOn = false;
@@ -36,6 +35,7 @@ public class InventoryGUI : MonoBehaviour
 				inventoryOn = true;
 			}
 		}
+
 		
 		
 
@@ -43,6 +43,7 @@ public class InventoryGUI : MonoBehaviour
 
 	void OnGUI ()
 	{
+		slotStyle = new GUIStyle (GUI.skin.button);
 		if (inventoryOn) {
 			GUI.BeginGroup (new Rect (80, 50, invW, invH));
 			// Main inventory frame
@@ -68,8 +69,13 @@ public class InventoryGUI : MonoBehaviour
 
 				if (inventory.getItems () [slotInd (i, j)] != null) {
 					ItemInfo itemI = inventory.getItems () [slotInd (i, j)];
-					GUIContent itemContent = new GUIContent (itemI.name + " x " + itemI.amount, itemI.icon, itemI.description);
-					GUI.Box (new Rect (j * slotW + padding, i * slotH + padding, slotW - padding, slotH - padding), itemContent, slotStyle);
+					GUIContent itemContent = new GUIContent (itemI.name + "\n x " + itemI.getAmount(), itemI.description);
+					
+					
+					setStyle (itemI);
+
+					
+					GUI.Button (new Rect (j * slotW + padding, i * slotH + padding, slotW - padding, slotH - padding), itemContent, slotStyle);
 				} else {
 					GUI.Box (new Rect (j * slotW + padding, i * slotH + padding, slotW - padding, slotH - padding), "");
 				}
@@ -84,4 +90,17 @@ public class InventoryGUI : MonoBehaviour
 	{
 		return (row * rows) + col;
 	}
+	
+	private void setStyle (ItemInfo itemI)
+	{
+		
+		slotStyle.normal.background = itemI.icon;
+		slotStyle.hover.background = itemI.icon;
+		slotStyle.active.background = itemI.icon;
+					
+		slotStyle.normal.textColor = new Color(0.2F, 0.2F, 0.2F, 1F);
+		slotStyle.hover.textColor = new Color(0.1F, 0.1F, 0.1F, 1F);
+		slotStyle.active.textColor = Color.black;
+	}
+
 }

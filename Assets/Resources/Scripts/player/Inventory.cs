@@ -10,11 +10,13 @@ public class Inventory : MonoBehaviour
 	private int inventorySize;
 	private List<ItemInfo> items;
 	private Slot nextEmpty;
+	private GameObject equippedWeapon;
 	
 	void Start ()
 	{
 		inventorySize = inventoryColums * inventoryRows;
 		items = initInventoriList ();
+		equippedWeapon = null;
 
 	}
 
@@ -25,23 +27,25 @@ public class Inventory : MonoBehaviour
 	
 	public List<ItemInfo> getItems ()
 	{
-		return items;
+		return items;	
 	}
 	
 	public void OnTriggerEnter (Collider other)
 	{	
 		// Collectible items ara added to inventory
 		if (other.gameObject.tag == "Collectible") {
-			other.gameObject.SetActive (false);
+			other.gameObject.SetActive(false);
 			ItemInfoScript infoS = (ItemInfoScript)other.gameObject.GetComponent (typeof(ItemInfoScript));
-			ItemInfo itemI = infoS.getItemInfo();
+			ItemInfo itemI = infoS.getItemInfo ();
 			
-			if(!items.Contains(itemI)) {
-				items[slotI (nextEmpty.getRow (), nextEmpty.getCol ())] = itemI;
+			if (!items.Contains (itemI)) {
+				items [slotI (nextEmpty.getRow (), nextEmpty.getCol ())] = itemI;
 				updateNextEmptySlot ();
 			} else {
-				ItemInfo inventoryItem = items.Find(x => x.name == itemI.name);
-				inventoryItem.amount += itemI.amount;
+				ItemInfo inventoryItem = items.Find (x => x.name == itemI.name);
+				Debug.Log(inventoryItem.getAmount());
+				inventoryItem.increaseAmountBy (itemI.getAmount());
+				Debug.Log(inventoryItem.getAmount());
 
 			}
 
@@ -83,5 +87,10 @@ public class Inventory : MonoBehaviour
 	private int slotI (int row, int col)
 	{
 		return (row * inventoryRows) + col;
+	}
+	
+	public GameObject getEquippedWeapon ()
+	{
+		return equippedWeapon;
 	}
 }
