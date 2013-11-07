@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour {
 	
 	public float walkingSpeed = 3.0f;
 	public float rotationSpeed = 200.0f;
+<<<<<<< HEAD
+	public Inventory inventory;
+=======
 	public float jumpSpeed = 1.0f;
 	public float gravity = 10.0f;
 	public GameObject towerPrefab;
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	
 	private CharacterController controller;
 	private Animation animation;
+>>>>>>> OssianL-master
 	private Transform weaponHand;
 	private GameObject currentWeapon;
 	private Vector3 movement;
@@ -49,7 +53,9 @@ public class PlayerController : MonoBehaviour {
 		
 		if(Input.GetKeyDown(KeyCode.E)) buildTower = true;
 	}
+<<<<<<< HEAD
 
+=======
 	
 	private void InitAnimations() {
 		animation = GetComponentInChildren<Animation>();
@@ -64,6 +70,7 @@ public class PlayerController : MonoBehaviour {
 		animation.wrapMode = WrapMode.Loop;
 		
 	}
+>>>>>>> OssianL-master
 	
 	private void PlayerMovement() {
 		transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * Time.deltaTime * rotationSpeed);
@@ -86,8 +93,14 @@ public class PlayerController : MonoBehaviour {
 		animation.CrossFade("Walk");
 	}
 	
-	private void WeaponControl() {
+<<<<<<< HEAD
+	private void WeaponControl ()
+	{
 
+=======
+	private void WeaponControl() {
+		
+>>>>>>> OssianL-master
 	}
 	
 	private void BuildTower() {

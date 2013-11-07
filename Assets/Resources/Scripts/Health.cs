@@ -4,7 +4,6 @@ using System.Collections;
 public class Health : MonoBehaviour {
 	
 	public int maxHealth = 100;
-	public GameObject asdf;
 	public AudioClip deathSound;
 	
 	private int health;
@@ -22,17 +21,16 @@ public class Health : MonoBehaviour {
 	
 	public void TakeDamage(int damage) {
 		health -= damage;
-		if(health < 0 && !dead) Dead();
+		if(health < 0 && !dead) OnDeath();
 	}
 	
-	private void Dead() {
+	private void OnDeath() {
 		if(dead) return;
 		dead = true;
-		for(int i = 0; i < 10; i++) {
-			Instantiate(asdf, transform.position, new Quaternion(0, 0, 0, 0));
+		if(deathSound != null) {
+			AudioSource.PlayClipAtPoint(deathSound, transform.position);
 		}
-		AudioSource.PlayClipAtPoint(deathSound, transform.position);
-		gameObject.SendMessage("Die");
+		gameObject.SendMessage("OnDeath");
 		Destroy(transform.gameObject);
 	}
 }
