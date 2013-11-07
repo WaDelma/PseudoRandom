@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour
 	
 	public float walkingSpeed = 10.0f;
 	public float rotationSpeed = 200.0f;
-	//public Inventory inventory;
-	
+	public Inventory inventory;
 	private Transform weaponHand;
 	private GameObject currentWeapon;
 	
@@ -30,14 +29,7 @@ public class PlayerController : MonoBehaviour
 		PlayerMovement ();
 		WeaponControl ();
 	}
-	
-	public void OnTriggerEnter (Collider other)
-	{
-		if (other.transform.tag == "Score Item") {	
-			Destroy (other.gameObject);
-		}
-		
-	}
+
 	
 	private void PlayerMovement ()
 	{
@@ -47,7 +39,7 @@ public class PlayerController : MonoBehaviour
 	
 	private void WeaponControl ()
 	{
-		
+
 	}
 	
 	private void SwitchWeapon (GameObject newWeapon)
@@ -58,4 +50,10 @@ public class PlayerController : MonoBehaviour
 		currentWeapon.transform.localPosition = Vector3.zero;
 		weaponHand.transform.localPosition = Vector3.zero;
 	}
+	
+	public Inventory getInventory ()
+	{
+		return inventory;
+	}
+	
 }
