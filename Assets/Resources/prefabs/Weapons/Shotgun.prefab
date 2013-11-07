@@ -28,8 +28,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.0668068, y: -44.6081657, z: 159.358109}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.04370689, y: -1.965994, z: -5.5581398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: ultimate weapon
-  damage: 50
+  damage: 225
   ammoCount: 10
   clipSize: 10
   distance: 100
@@ -117,7 +117,7 @@ MonoBehaviour:
   firingSpeed: .100000001
   automaticFire: 0
   muzzlePosition: {x: 0, y: .100000001, z: .5}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 100000, guid: 866cb844ea8e932498c6a3749f0017d5, type: 2}
   bulletTrailPrefab: {fileID: 100000, guid: 866cb844ea8e932498c6a3749f0017d5, type: 2}
   firingSound: {fileID: 8300000, guid: b41cad28af7f4f243b9258c40237b71d, type: 3}
   reloadSound: {fileID: 0}
@@ -134,11 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d216fab35c90d429bf5f4a46b471c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: SHOTGUN
+  itemName: SHOTGUN
   icon: {fileID: 2800000, guid: 0cf62d1ed716e89469da97dda0239ee1, type: 3}
   description: SHOOT!
   amount: 1
-  gObject: {fileID: 0}
+  gObject: {fileID: 100000}
+  isWeapon: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

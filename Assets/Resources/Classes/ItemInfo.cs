@@ -6,7 +6,7 @@ public class ItemInfo
 {
 	
 	// Item name
-	public string name;
+	public string itemName;
 	
 	// Item ID
 	public int id;
@@ -20,23 +20,23 @@ public class ItemInfo
 	// Item amount
 	private int amount;
 	
-	// Is the item equipped
-	public bool isEquipped;
-	
 	// Game object this info is attached to
 	public GameObject gObject;
+	
+	// Is this item a weapon
+	public bool isWeapon;
 	
 	
 	// Add other info here, weight etc
 
-	public ItemInfo (string name, Texture2D icon, string description, int amount, bool isEquipped, GameObject gObject)
+	public ItemInfo (string itemName, Texture2D icon, string description, int amount, GameObject gObject, bool isWeapon)
 	{
-		this.name = name;
+		this.itemName = itemName;
 		this.icon = icon;
 		this.description = description;
 		this.amount = amount;
-		this.isEquipped = isEquipped;
 		this.gObject = gObject;
+		this.isWeapon = isWeapon;
 	}
 
 	public void increaseAmountBy (int amount)
@@ -57,13 +57,13 @@ public class ItemInfo
 		if (obj.GetType () != typeof(ItemInfo))
 			return false;
 		ItemInfo other = (ItemInfo)obj;
-		return name == other.name;
+		return itemName == other.itemName;
 	}
 
 	public override int GetHashCode ()
 	{
 		unchecked {
-			return (name != null ? name.GetHashCode () : 0);
+			return (itemName != null ? itemName.GetHashCode () : 0);
 		}
 	}
 
