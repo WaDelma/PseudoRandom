@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+<<<<<<< HEAD
+public class PlayerController : MonoBehaviour
+{
+=======
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour {
+>>>>>>> 1243dc597170c628e55b4369951939d37dd6db80
 	
 	public float walkingSpeed = 3.0f;
 	public float rotationSpeed = 200.0f;
@@ -26,11 +31,40 @@ public class PlayerController : MonoBehaviour {
 	
 	public const float UNIT = 1.6f;
 	
-	public void Awake() {
-		ScoreItem.player = transform.gameObject;
+	public void Awake ()
+	{
+		
 	}
 	
 	// Use this for initialization
+<<<<<<< HEAD
+	void Start ()
+	{
+		weaponHand = transform.Find ("player/Armature/root/stomach/upper_arm_R/lower_arm_R/hand_R/WeaponHand");
+	
+		SwitchWeapon ((GameObject)Resources.Load ("Prefabs/Weapons/Shotgun"));
+	}
+	
+	// Update is called once per frame
+	void Update ()
+	{
+		PlayerMovement ();
+		WeaponControl ();
+	}
+	
+	public void OnTriggerEnter (Collider other)
+	{
+		if (other.transform.tag == "Score Item") {	
+			Destroy (other.gameObject);
+		}
+		
+	}
+	
+	private void PlayerMovement ()
+	{
+		transform.position += transform.forward * Input.GetAxis ("Vertical") * Time.deltaTime * walkingSpeed;
+		transform.Rotate (Vector3.up, Input.GetAxis ("Horizontal") * Time.deltaTime * rotationSpeed);
+=======
 	void Start () {
 		controller = GetComponent<CharacterController>();
 		weaponHand = transform.Find("player/Armature/root/stomach/upper_arm_R/lower_arm_R/hand_R/WeaponHand");
@@ -61,7 +95,6 @@ public class PlayerController : MonoBehaviour {
 		animation["Aim"].AddMixingTransform(transform.Find("player/Armature/root/stomach/upper_arm_R"));
 		animation["Kick"].AddMixingTransform(transform.Find("player/Armature/root/stomach/upper_leg_R"));
 		animation.wrapMode = WrapMode.Loop;
-		
 	}
 	
 	private void PlayerMovement() {
@@ -83,12 +116,20 @@ public class PlayerController : MonoBehaviour {
 	public void PlayerAnimation() {	
 		animation.CrossFade("Aim");
 		animation.CrossFade("Walk");
+>>>>>>> 1243dc597170c628e55b4369951939d37dd6db80
 	}
 	
-	private void WeaponControl() {
+	private void WeaponControl ()
+	{
 		
 	}
 	
+<<<<<<< HEAD
+	private void SwitchWeapon (GameObject newWeapon)
+	{
+		Destroy (currentWeapon);
+		currentWeapon = (GameObject)Instantiate (newWeapon);
+=======
 	private void BuildTower() {
 		if(tower == null) NewTower();
 		Vector3 position = transform.position + (transform.forward * UNIT);
@@ -116,6 +157,7 @@ public class PlayerController : MonoBehaviour {
 	private void SwitchWeapon(GameObject newWeapon) {
 		Destroy(currentWeapon);
 		currentWeapon = (GameObject) Instantiate(newWeapon);
+>>>>>>> 1243dc597170c628e55b4369951939d37dd6db80
 		currentWeapon.transform.parent = weaponHand;
 		currentWeapon.transform.localPosition = Vector3.zero;
 		weaponHand.transform.localPosition = Vector3.zero;

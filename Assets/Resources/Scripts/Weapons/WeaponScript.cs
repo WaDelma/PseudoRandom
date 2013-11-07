@@ -23,7 +23,7 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		transform.localRotation = Quaternion.Euler(0.0f, 250.0f, 163.0f);
 	}
 	
 	// Update is called once per frame

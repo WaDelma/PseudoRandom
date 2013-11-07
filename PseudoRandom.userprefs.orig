@@ -1,5 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\WorldGen\Generator.cs">
+    <Files>
+      <File FileName="Assets\Resources\Scripts\WorldGen\WorldGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WorldGen\HousingBlockGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WorldGen\HouseGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WorldGen\Generator.cs" Line="13" Column="19" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\player\Inventory.cs">
+    <Files>
+      <File FileName="Assets\Resources\Scripts\player\PlayerController.cs" Line="24" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Items\ItemInfoScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Classes\ItemInfo.cs" Line="28" Column="20" />
+      <File FileName="Assets\Resources\Scripts\player\Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\player\InventoryGUI.cs" Line="32" Column="38" />
+      <File FileName="Assets\Resources\Classes\Slot.cs" Line="4" Column="19" />
+>>>>>>> ab375e97647cffa1ceda10c8a3b81644eee8f13e
+=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\player\PlayerController.cs">
     <Files>
       <File FileName="Assets\Resources\Scripts\Weapons\WeaponScript.cs" Line="26" Column="3" />
@@ -12,6 +31,7 @@
       <File FileName="Assets\Resources\Scripts\Towers\Tower.cs" Line="30" Column="30" />
       <File FileName="Assets\Resources\Scripts\LightningBolt.cs" Line="35" Column="39" />
       <File FileName="Assets\Resources\Scripts\Towers\TeslaCoil.cs" Line="12" Column="3" />
+>>>>>>> 1243dc597170c628e55b4369951939d37dd6db80
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
