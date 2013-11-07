@@ -1,4 +1,4 @@
-using UnityEngine;
+		using UnityEngine;
 using System.Collections;
 using System.Text;
 using System.Collections.Generic;
@@ -8,8 +8,12 @@ public class InventoryGUI : MonoBehaviour
 {
 	private bool inventoryOn = false;
 	public Inventory inventory;
-	private int invW = Screen.width - 460;
-	private int invH = Screen.height - 400;
+	
+	public int inventoryWidthDeduction;
+	public int inventoryHeightDeduction;
+	
+	private int invW;
+	private int invH;
 	private int rows;
 	private int cols;
 	private int padding = 10;
@@ -21,6 +25,10 @@ public class InventoryGUI : MonoBehaviour
 	{
 		this.rows = inventory.inventoryRows;
 		this.cols = inventory.inventoryColums;
+		this.invW = Screen.width - inventoryWidthDeduction;
+		this.invH = Screen.height - inventoryHeightDeduction;
+		
+		
 	}
 	
 	// Update is called once per frame
@@ -69,7 +77,7 @@ public class InventoryGUI : MonoBehaviour
 
 				if (inventory.getItems () [slotInd (i, j)] != null) {
 					ItemInfo itemI = inventory.getItems () [slotInd (i, j)];
-					GUIContent itemContent = new GUIContent (itemI.name + "\n x " + itemI.getAmount(), itemI.description);
+					GUIContent itemContent = new GUIContent (itemI.itemName + "\n x " + itemI.getAmount(), itemI.description);
 					
 					
 					setStyle (itemI);

@@ -108,14 +108,22 @@
      <Compile Include="Assets\Resources\Classes\ItemInfo.cs" />
      <Compile Include="Assets\Resources\Classes\Slot.cs" />
      <Compile Include="Assets\Resources\Scripts\AreaSpawner.cs" />
+     <Compile Include="Assets\Resources\Scripts\Common\Perlin.cs" />
+     <Compile Include="Assets\Resources\Scripts\Common\Utils.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyController.cs" />
      <Compile Include="Assets\Resources\Scripts\Expire.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUI\DraggableGUIElement.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUI\ForwardAllMouseEvents.cs" />
      <Compile Include="Assets\Resources\Scripts\Health.cs" />
+     <Compile Include="Assets\Resources\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Resources\Scripts\Items\ItemInfoScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\LightningBolt.cs" />
      <Compile Include="Assets\Resources\Scripts\Resource.cs" />
      <Compile Include="Assets\Resources\Scripts\ScreenFader.cs" />
-     <Compile Include="Assets\Resources\Scripts\Utils.cs" />
+     <Compile Include="Assets\Resources\Scripts\Towers\TeslaCoil.cs" />
+     <Compile Include="Assets\Resources\Scripts\Towers\Tower.cs" />
+     <Compile Include="Assets\Resources\Scripts\Towers\TowerAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Velocity.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\ShotgunScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\WeaponScript.cs" />
@@ -146,6 +154,10 @@
  <Reference Include="JsonFx.Json">
  <HintPath>Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{03152E32-6A21-998A-63E9-979ED3CFDB6B}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

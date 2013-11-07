@@ -30,20 +30,21 @@ public class WeaponScript : MonoBehaviour
 	// Update is called once per frame
 	public void Update ()
 	{
-
+		if (this.gameObject.tag == "Equipped") {
 			if (Input.GetButtonDown ("Fire1"))
 				firing = true;
 			if (firing && Time.time - lastFiringTime > firingSpeed)
 				Fire ();
 			if (!automaticFire || Input.GetButtonUp ("Fire1"))
 				firing = false;
-		
+		}
 	}
 	
 	protected virtual void Fire ()
 	{
 		lastFiringTime = Time.time;
 		AudioSource.PlayClipAtPoint (firingSound, transform.position);
+		Debug.Log("FIRE");
 	}
 	
 	protected virtual void Reload ()

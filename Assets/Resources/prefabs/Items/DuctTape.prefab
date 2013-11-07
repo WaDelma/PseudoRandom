@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3405261, y: 160507.938, z: -6339983.5}
+  m_LocalPosition: {x: -16.3558598, y: -2.000278, z: 8.85586739}
   m_LocalScale: {x: .5, y: .100000001, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,10 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d216fab35c90d429bf5f4a46b471c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Duct Tape
+  itemName: DUCT TAPE
   icon: {fileID: 2800000, guid: 7e3ae504659ddc64b8ae7818d5ea13e8, type: 3}
   description: Tape stuff together!
   amount: 1
+  gObject: {fileID: 100000}
+  isWeapon: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
