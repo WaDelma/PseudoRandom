@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public AnimationClip aim;
 	public AnimationClip kick;
 	
+	public Inventory inventory;
+	
 	private CharacterController controller;
 	private Animation animation;
 	private Transform weaponHand;
@@ -24,13 +26,14 @@ public class PlayerController : MonoBehaviour {
 	private bool buildTower = false;
 	private GameObject tower;
 	
+	
 	public const float UNIT = 1.6f;
 	
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
 		weaponHand = transform.Find("player/Armature/root/stomach/upper_arm_R/lower_arm_R/hand_R/WeaponHand");
-		SwitchWeapon((GameObject) Resources.Load("Prefabs/Weapons/Shotgun"));
+		//SwitchWeapon((GameObject) Resources.Load("Prefabs/Weapons/Shotgun"));
 		movement = new Vector3();
 		
 		InitAnimations();
@@ -45,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 		
 		if(Input.GetKeyDown(KeyCode.E)) buildTower = true;
 	}
+
 	
 	private void InitAnimations() {
 		animation = GetComponentInChildren<Animation>();
@@ -57,6 +61,7 @@ public class PlayerController : MonoBehaviour {
 		animation["Aim"].AddMixingTransform(transform.Find("player/Armature/root/stomach/upper_arm_R"));
 		animation["Kick"].AddMixingTransform(transform.Find("player/Armature/root/stomach/upper_leg_R"));
 		animation.wrapMode = WrapMode.Loop;
+		
 	}
 	
 	private void PlayerMovement() {
@@ -81,7 +86,10 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	private void WeaponControl() {
-		
+		if(inventory.hasWeapon()){
+			GameObject bestWeapon = inventory.getBestWeapon();
+			SwitchWeapon(bestWeapon);
+		}
 	}
 	
 	private void BuildTower() {
@@ -111,8 +119,15 @@ public class PlayerController : MonoBehaviour {
 	private void SwitchWeapon(GameObject newWeapon) {
 		Destroy(currentWeapon);
 		currentWeapon = (GameObject) Instantiate(newWeapon);
+		currentWeapon.tag = "Equipped";
 		currentWeapon.transform.parent = weaponHand;
 		currentWeapon.transform.localPosition = Vector3.zero;
 		weaponHand.transform.localPosition = Vector3.zero;
 	}
+	
+	public Inventory getInventory ()
+	{
+		return inventory;
+	}
+	
 }
