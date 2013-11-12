@@ -26,10 +26,6 @@ public class PlayerController : MonoBehaviour {
 	
 	public const float UNIT = 1.6f;
 	
-	public void Awake() {
-		ScoreItem.player = transform.gameObject;
-	}
-	
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();

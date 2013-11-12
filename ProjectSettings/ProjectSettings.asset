@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 1231231
+  productName: PseudoRandom
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -70,7 +70,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   iPhoneBundleIdentifier: com.Company.ProductName
-  productGUID: 9ebe299eb528c2d488908b48a6232b68
+  productGUID: e4d4fcecce6a30e4fbb15b516b7caace
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 6
@@ -142,7 +142,7 @@ PlayerSettings:
   ps3TrialMode: 0
   flashStrippingLevel: 2
   scriptingDefineSymbols: {}
-  metroPackageName: 1231231
+  metroPackageName: PseudoRandom
   metroPackageLogo: 
   metroPackageVersion: 
   metroCertificatePath: 
@@ -150,7 +150,7 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 1231231
+  metroApplicationDescription: PseudoRandom
   metroTileLogo: 
   metroTileWideLogo: 
   metroTileSmallLogo: 
