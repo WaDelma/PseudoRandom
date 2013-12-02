@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour {
 	public float attackRate = 1.0f;
 	public float attackDistance = 0.5f;
 	public int damage = 10;
+	public float gravity = 3.0f;
 
 	public Animation idle;
 	public Animation walk;
@@ -28,10 +29,12 @@ public class EnemyController : MonoBehaviour {
 	}
 	
 	public void Move(Vector3 direction) {
-		direction.y = transform.position.y;
 		direction.Normalize();
-		SmoothRotate(direction);
-		controller.SimpleMove(direction * speed * Time.deltaTime);
+		if(!controller.isGrounded) transform.position += Vector3.down * gravity * Time.deltaTime;
+		if(direction.magnitude > 0.1) {
+			SmoothRotate(direction);
+			controller.SimpleMove(direction * speed * Time.deltaTime);
+		}
 	}
 	
 	public void SmoothRotate(Vector3 direction) {

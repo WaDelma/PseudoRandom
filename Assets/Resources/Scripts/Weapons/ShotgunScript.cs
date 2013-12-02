@@ -3,16 +3,13 @@ using System.Collections;
 
 public class ShotgunScript : WeaponScript
 {
-
-	
-
-	
 	public int shots = 20;
 	public float spread = 20.0f; //spreading angle
 	
 	protected override void Fire ()
 	{
 		base.Fire ();
+		Debug.Log("fire");
 		
 		for(int i = 0; i < shots; i++) {
 			Vector3 direction = transform.forward;

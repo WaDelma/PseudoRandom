@@ -44,7 +44,6 @@ public class WeaponScript : MonoBehaviour
 	{
 		lastFiringTime = Time.time;
 		AudioSource.PlayClipAtPoint (firingSound, transform.position);
-		Debug.Log("FIRE");
 	}
 	
 	protected virtual void Reload ()

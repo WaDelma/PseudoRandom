@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour {
 	private Transform weaponHand;
 	private GameObject currentWeapon;
 	private Vector3 movement;
-	private bool buildTower = false;
-	private GameObject tower;
+	private bool buildingInProgress = false;
 	
 	
 	public const float UNIT = 1.6f;
@@ -44,9 +43,6 @@ public class PlayerController : MonoBehaviour {
 		PlayerMovement();
 		PlayerAnimation();
 		WeaponControl();
-		if(buildTower) BuildTower();
-		
-		if(Input.GetKeyDown(KeyCode.E)) buildTower = true;
 	}
 
 	
@@ -74,7 +70,8 @@ public class PlayerController : MonoBehaviour {
 		controller.Move(movement);
 	}
 	
-	private void Jump() {
+
+private void Jump() {
 		if(controller.isGrounded) {
 			movement.y = jumpSpeed;
 		}
@@ -90,34 +87,20 @@ public class PlayerController : MonoBehaviour {
 			GameObject bestWeapon = inventory.getBestWeapon();
 			SwitchWeapon(bestWeapon);
 		}
+	}	
+	
+	public void Build(Object building) {
+		buildingInProgress = true;
+		if(currentWeapon != null) currentWeapon.GetComponent<WeaponScript>().enabled = false;
 	}
 	
-	private void BuildTower() {
-		if(tower == null) NewTower();
-		Vector3 position = transform.position + (transform.forward * UNIT);
-		position = Utils.Snap(position, UNIT);
-		position.x += UNIT / 2;
-		position.z += UNIT / 2;
-		position.y = 0;
-		tower.transform.position = position;
-		if(Input.GetButtonDown("Fire1")) PlaceTower();
-	}
-	
-	private void NewTower() {
-		tower = (GameObject) Instantiate(towerPrefab);
-		tower.collider.isTrigger = true;
-		tower.GetComponent<Tower>().enabled = false;
-	}
-	
-	private void PlaceTower() {
-		buildTower = false;
-		tower.collider.isTrigger = false;
-		tower.GetComponent<Tower>().enabled = true;
-		tower = null;
+	public void BuildComplete() {
+		buildingInProgress = false;
+		if(currentWeapon != null) currentWeapon.GetComponent<WeaponScript>().enabled = true;
 	}
 	
 	private void SwitchWeapon(GameObject newWeapon) {
-		Destroy(currentWeapon);
+		if(currentWeapon != null) Destroy(currentWeapon);
 		currentWeapon = (GameObject) Instantiate(newWeapon);
 		currentWeapon.tag = "Equipped";
 		currentWeapon.transform.parent = weaponHand;
