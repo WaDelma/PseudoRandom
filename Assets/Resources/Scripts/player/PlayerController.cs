@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour {
 	private Vector3 movement;
 	private bool buildingInProgress = false;
 	
-	
-	public const float UNIT = 1.6f;
-	
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();

@@ -3,25 +3,25 @@ using System.Collections;
 
 public class BuilderController : MonoBehaviour {
 	
-	private bool active;
+	private bool buildingInProgress;
 	private GameObject building;
 	private Tower tower;
 	private float unit = 1.6f;
 	
-	public GameObject testTower;
+	public GameObject testObject;
 	
 	// Use this for initialization
 	void Start () {
-		
+		SendMessage("Build", testObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(active) BuildProgress();
+		if(buildingInProgress) BuildProgress();
 	}
 	
 	public void Build(Object newBuilding) {
-		active = true;
+		buildingInProgress = true;
 		building = (GameObject) Instantiate(newBuilding);
 		building.collider.isTrigger = true;
 		tower = building.GetComponent<Tower>();
@@ -34,12 +34,12 @@ public class BuilderController : MonoBehaviour {
 		position.x += unit / 2;
 		position.z += unit / 2;
 		position.y = 0;
-		tower.transform.position = position;
+		building.transform.position = position;
 		if(Input.GetButtonDown("Fire1")) PlaceBuilding();
 	}
 	
 	private void PlaceBuilding() {
-		active = false;
+		buildingInProgress = false;
 		building.collider.isTrigger = false;
 		if(tower != null) tower.enabled = true;
 		tower = null;

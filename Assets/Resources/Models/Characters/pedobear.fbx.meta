@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 34145d0b3a9b6794688e79fbf073050e
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: arm_IK_L
+    100002: arm_IK_R
+    100004: Armature
+    100006: Camera
+    100008: chest
+    100010: elbow
+    100012: elbow_002
+    100014: foot_IK_L
+    100016: foot_IK_R
+    100018: foot_L
+    100020: foot_R
+    100022: head
+    100024: knee
+    100026: knee_002
+    100028: Lamp
+    100030: Lamp_001
+    100032: Lamp_002
+    100034: Lamp_003
+    100036: Lamp_004
+    100038: lower_arm_L
+    100040: lower_arm_R
+    100042: lower_leg_L
+    100044: lower_leg_R
+    100046: //RootNode
+    100048: pedobear
+    100050: stomach
+    100052: upper_arm_L
+    100054: upper_arm_R
+    100056: upper_leg_L
+    100058: upper_leg_R
+    400000: arm_IK_L
+    400002: arm_IK_R
+    400004: Armature
+    400006: Camera
+    400008: chest
+    400010: elbow
+    400012: elbow_002
+    400014: foot_IK_L
+    400016: foot_IK_R
+    400018: foot_L
+    400020: foot_R
+    400022: head
+    400024: knee
+    400026: knee_002
+    400028: Lamp
+    400030: Lamp_001
+    400032: Lamp_002
+    400034: Lamp_003
+    400036: Lamp_004
+    400038: lower_arm_L
+    400040: lower_arm_R
+    400042: lower_leg_L
+    400044: lower_leg_R
+    400046: //RootNode
+    400048: pedobear
+    400050: stomach
+    400052: upper_arm_L
+    400054: upper_arm_R
+    400056: upper_leg_L
+    400058: upper_leg_R
+    4300000: pedobear
+    7400000: Default Take
+    7400002: walk
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: pedobear
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 249
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    - name: walk
+      takeName: walk
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 
