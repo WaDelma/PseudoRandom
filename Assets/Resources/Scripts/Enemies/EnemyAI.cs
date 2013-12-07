@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour {
 	public string targetTag = "Treasure";
 	public float attackPlayerTriggerDistance = 5.0f;
 	public float attackPlayerUntriggerDistance = 15.0f;
-	public float attackDistance = 0.5f;
+	//public float attackDistance = 1f;
 	
 	private EnemyController controller;
 	private Seeker seeker;
@@ -67,7 +67,7 @@ public class EnemyAI : MonoBehaviour {
 	private void Attack() {
 		if(currentTarget == null) return;
 		float targetDistance = Vector3.Distance(transform.position, currentTarget.transform.position);
-		if(targetDistance < attackDistance) controller.Attack(currentTarget);
+		if(targetDistance < controller.attackDistance) controller.Attack(currentTarget);
 	}
 	
 	private void UpdatePath() {

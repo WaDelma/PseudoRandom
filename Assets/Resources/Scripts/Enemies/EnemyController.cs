@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour {
 	public Animation attack;
 	
 	private CharacterController controller;
-	private float lastAttackTime;
+	private float lastAttackTime = float.MinValue;
 	private float rotationSpeed = 3f;
 	
 	// Use this for initialization
@@ -43,10 +43,13 @@ public class EnemyController : MonoBehaviour {
 	
 	public void Attack(GameObject target) {
 		bool withinDistance = Vector3.Distance(transform.position, target.transform.position) < attackDistance;
-		Health healthComponent = target.GetComponent<Health>();
-		if(healthComponent != null && withinDistance && (Time.time - lastAttackTime) < attackRate) {
-			healthComponent.TakeDamage(damage);
-			target.SendMessage("onHit");
+		Health targetHealth = target.GetComponent<Health>();
+		if(targetHealth != null && withinDistance && (Time.time - lastAttackTime) > attackRate) {
+			lastAttackTime = Time.time;
+			targetHealth.TakeDamage(damage);
+			target.SendMessage("OnHit");
 		}
 	}
+	
+	
 }

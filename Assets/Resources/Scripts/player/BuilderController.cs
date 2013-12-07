@@ -12,7 +12,7 @@ public class BuilderController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		SendMessage("Build", testObject);
+		//SendMessage("Build", testObject);
 	}
 	
 	// Update is called once per frame

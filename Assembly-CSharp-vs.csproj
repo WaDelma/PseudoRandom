@@ -128,9 +128,11 @@
      <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
      <Compile Include="Assets\Resources\Scripts\ScreenFader.cs" />
      <Compile Include="Assets\Resources\Scripts\SimpleAnimation.cs" />
+     <Compile Include="Assets\Resources\Scripts\SoundController.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\TeslaCoil.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\Tower.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\TowerAI.cs" />
+     <Compile Include="Assets\Resources\Scripts\WaveController.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\ShotgunScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\WeaponScript.cs" />
      <Compile Include="Assets\Resources\Scripts\WorldGen\Generator.cs" />
