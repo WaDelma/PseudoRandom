@@ -2,8 +2,7 @@
 using System.Collections;
 
 // Generic class on which to build different game items
-public class ItemInfo
-{
+public class ItemInfo {
 	
 	// Item name
 	public string itemName;
@@ -39,17 +38,25 @@ public class ItemInfo
 		this.isWeapon = isWeapon;
 	}
 
-	public void increaseAmountBy (int amount)
-	{
-		Debug.Log(amount);
+	public void increaseAmountBy (int amount) {
+		Debug.Log (amount);
 		this.amount = this.amount + amount;
 	}
-	public int getAmount(){
+	
+	public bool decreaseAmountBy (int amount) {
+		Debug.Log (amount);
+		if (this.amount < amount) {
+			return false;
+		} 
+		this.amount = this.amount - amount;
+		return true;
+	}
+		
+	public int getAmount () {
 		return this.amount;
 	}
 	
-	public override bool Equals (object obj)
-	{
+	public override bool Equals (object obj) {
 		if (obj == null)
 			return false;
 		if (ReferenceEquals (this, obj))
@@ -60,8 +67,7 @@ public class ItemInfo
 		return itemName == other.itemName;
 	}
 
-	public override int GetHashCode ()
-	{
+	public override int GetHashCode () {
 		unchecked {
 			return (itemName != null ? itemName.GetHashCode () : 0);
 		}
