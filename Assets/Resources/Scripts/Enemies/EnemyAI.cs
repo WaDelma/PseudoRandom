@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour {
 	public string targetTag = "Treasure";
 	public float attackPlayerTriggerDistance = 5.0f;
 	public float attackPlayerUntriggerDistance = 15.0f;
-	public float attackDistance = 0.5f;
+	//public float attackDistance = 1f;
 	
 	private EnemyController controller;
 	private Seeker seeker;
@@ -35,15 +35,22 @@ public class EnemyAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		FollowTarget();
-		Attack();
+		
+	}
+	
+	public void FixedUpdate() {
 		if((Time.time - lastPathCalculationTime) > pathCalculationRate) UpdatePath();
+		if(path != null && currentWaypoint < path.vectorPath.Count) {
+			FollowTarget();
+			if(DistanceToNextNode() < waypointSkipDistance) currentWaypoint++;
+		}
+		Attack();
 	}
 	
 	public void  OnPathComplete(Path path) {
 		if(!path.error) {
 			this.path = path;
-			currentWaypoint = 0;
+			currentWaypoint = 1;
 			lastPathCalculationTime = Time.time;
 		}
 		else {
@@ -52,19 +59,15 @@ public class EnemyAI : MonoBehaviour {
 	}
 	
 	private void FollowTarget() {
-		if(path == null) return;
-		if(currentWaypoint >= path.vectorPath.Count) return;
-		Vector3 direction = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+		Vector3 direction = path.vectorPath[currentWaypoint] - transform.position;
+		direction.y = 0;
 		controller.Move(direction);
-		if(Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < waypointSkipDistance) {
-			currentWaypoint++;
-		}
 	}
 	
 	private void Attack() {
 		if(currentTarget == null) return;
 		float targetDistance = Vector3.Distance(transform.position, currentTarget.transform.position);
-		if(targetDistance < attackDistance) controller.Attack(currentTarget);
+		if(targetDistance < controller.attackDistance) controller.Attack(currentTarget);
 	}
 	
 	private void UpdatePath() {
@@ -98,5 +101,9 @@ public class EnemyAI : MonoBehaviour {
 			}
 		}
 		return closestTarget;
+	}
+	
+	private float DistanceToNextNode() {
+		return Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
 	}
 }

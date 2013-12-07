@@ -12,13 +12,8 @@ GameObject:
   - 23: {fileID: 2300000}
   - 64: {fileID: 6400000}
   - 95: {fileID: 9500000}
-<<<<<<< HEAD:Assets/Resources/prefabs/World/Road_l.prefab
-  m_Layer: 8
-  m_Name: Road_l
-=======
   m_Layer: 0
   m_Name: RoadTurn
->>>>>>> upstream/master:Assets/Resources/prefabs/World/RoadTurn.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -33,4 +33,8 @@ public class Health : MonoBehaviour {
 		gameObject.SendMessage("OnDeath");
 		Destroy(transform.gameObject);
 	}
+	
+	public int GetHealth() {
+		return health;
+	}
 }

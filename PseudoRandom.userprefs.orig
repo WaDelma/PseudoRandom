@@ -1,17 +1,33 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\player\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\GUI\DraggableGUIElement.cs">
     <Files>
+<<<<<<< HEAD
+      <File FileName="Assets\Resources\Scripts\Weapons\WeaponScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Enemies\EnemyAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Enemies\EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Towers\TowerAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HealthBar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\player\PlayerController.cs" Line="27" Column="33" />
+      <File FileName="Assets\Resources\Scripts\Towers\Tower.cs" Line="30" Column="30" />
+      <File FileName="Assets\Resources\Scripts\LightningBolt.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Towers\TeslaCoil.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Resources\Scripts\player\PlayerController.cs" Line="31" Column="2" />
       <File FileName="Assets\Resources\Scripts\Weapons\WeaponScript.cs" Line="26" Column="3" />
       <File FileName="Assets\Resources\Scripts\Health.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Enemies\EnemyAI.cs" Line="57" Column="15" />
       <File FileName="Assets\Resources\Scripts\Enemies\EnemyController.cs" Line="31" Column="3" />
       <File FileName="Assets\Resources\Scripts\Towers\TowerAI.cs" Line="6" Column="2" />
       <File FileName="Assets\Resources\Scripts\HealthBar.cs" Line="7" Column="2" />
-      <File FileName="Assets\Resources\Scripts\player\PlayerController.cs" Line="24" Column="33" />
       <File FileName="Assets\Resources\Scripts\Towers\Tower.cs" Line="30" Column="30" />
       <File FileName="Assets\Resources\Scripts\LightningBolt.cs" Line="35" Column="39" />
       <File FileName="Assets\Resources\Scripts\Towers\TeslaCoil.cs" Line="12" Column="3" />
+      <File FileName="Assets\Resources\Scripts\player\Inventory.cs" Line="26" Column="3" />
+      <File FileName="Assets\Resources\Scripts\Expire.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUI\DraggableGUIElement.cs" Line="11" Column="2" />
+>>>>>>> upstream/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

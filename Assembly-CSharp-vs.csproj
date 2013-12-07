@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_1;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_0;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>B:/Program Files/Unity/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>B:/Program Files/Unity/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -108,23 +108,31 @@
      <Compile Include="Assets\Resources\Classes\ItemInfo.cs" />
      <Compile Include="Assets\Resources\Classes\Slot.cs" />
      <Compile Include="Assets\Resources\Scripts\AreaSpawner.cs" />
+     <Compile Include="Assets\Resources\Scripts\Common\HSBColor.cs" />
      <Compile Include="Assets\Resources\Scripts\Common\Perlin.cs" />
      <Compile Include="Assets\Resources\Scripts\Common\Utils.cs" />
+     <Compile Include="Assets\Resources\Scripts\DiscoLight.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyAI.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemies\EnemyController.cs" />
      <Compile Include="Assets\Resources\Scripts\Expire.cs" />
      <Compile Include="Assets\Resources\Scripts\GUI\DraggableGUIElement.cs" />
      <Compile Include="Assets\Resources\Scripts\GUI\ForwardAllMouseEvents.cs" />
+     <Compile Include="Assets\Resources\Scripts\GameController.cs" />
      <Compile Include="Assets\Resources\Scripts\Health.cs" />
      <Compile Include="Assets\Resources\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Resources\Scripts\Items\ItemInfoScript.cs" />
      <Compile Include="Assets\Resources\Scripts\LightningBolt.cs" />
+     <Compile Include="Assets\Resources\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Resources\Scripts\MenuCamera.cs" />
      <Compile Include="Assets\Resources\Scripts\Resource.cs" />
+     <Compile Include="Assets\Resources\Scripts\Rotation.cs" />
      <Compile Include="Assets\Resources\Scripts\ScreenFader.cs" />
+     <Compile Include="Assets\Resources\Scripts\SimpleAnimation.cs" />
+     <Compile Include="Assets\Resources\Scripts\SoundController.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\TeslaCoil.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\Tower.cs" />
      <Compile Include="Assets\Resources\Scripts\Towers\TowerAI.cs" />
-     <Compile Include="Assets\Resources\Scripts\Velocity.cs" />
+     <Compile Include="Assets\Resources\Scripts\WaveController.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\ShotgunScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Weapons\WeaponScript.cs" />
      <Compile Include="Assets\Resources\Scripts\WorldGen\Generator.cs" />
@@ -132,6 +140,7 @@
      <Compile Include="Assets\Resources\Scripts\WorldGen\HouseTile.cs" />
      <Compile Include="Assets\Resources\Scripts\WorldGen\HousingBlockGenerator.cs" />
      <Compile Include="Assets\Resources\Scripts\WorldGen\WorldGenerator.cs" />
+     <Compile Include="Assets\Resources\Scripts\player\BuilderController.cs" />
      <Compile Include="Assets\Resources\Scripts\player\Inventory.cs" />
      <Compile Include="Assets\Resources\Scripts\player\InventoryGUI.cs" />
      <Compile Include="Assets\Resources\Scripts\player\PlayerController.cs" />
